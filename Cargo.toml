@@ -1,3 +1,6 @@
+[workspace]
+members = ["programs/*"]
+
 [package]
 name = "learning_burn"
 version = "0.1.0"
