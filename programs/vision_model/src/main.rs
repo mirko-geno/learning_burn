@@ -1,15 +1,17 @@
 use vision_model::{model::ModelConfig, training::TrainingConfig};
 use burn::{
-    backend::{Autodiff, Wgpu},
+    backend::Autodiff,
     optim::AdamConfig,
     data::dataloader::Dataset,
 };
+use burn_cuda::{Cuda, CudaDevice};
+
 
 fn main() {
-    type MyBackend = Wgpu<f32, i32>;
+    type MyBackend = Cuda<f32, i32>;
     type MyAutodiffBackend = Autodiff<MyBackend>;
 
-    let device = burn::backend::wgpu::WgpuDevice::default();
+    let device = CudaDevice::default();
     let artifact_dir = "/tmp/model";
 
     vision_model::training::train::<MyAutodiffBackend>(
