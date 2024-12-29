@@ -2474,6 +2474,10 @@ checksum = "bbd2bcb4c963f2ddae06a2efc7e9f3591312473c50c6685e1f298068316e66fe"
 [[package]]
 name = "learning_burn"
 version = "0.1.0"
+dependencies = [
+ "burn",
+ "burn-cuda",
+]
 
 [[package]]
 name = "lebe"
@@ -2687,6 +2691,14 @@ dependencies = [
  "log",
  "wasi",
  "windows-sys 0.52.0",
+]
+
+[[package]]
+name = "my_mnist_model"
+version = "0.1.0"
+dependencies = [
+ "burn",
+ "burn-cuda",
 ]
 
 [[package]]

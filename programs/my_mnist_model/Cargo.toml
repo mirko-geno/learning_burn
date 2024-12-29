@@ -1,0 +1,8 @@
+[package]
+name = "my_mnist_model"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+burn = { version = "0.15.0", features = ["train", "wgpu", "vision"] }
+burn-cuda = "0.15.0"
